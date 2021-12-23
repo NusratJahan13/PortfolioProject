@@ -39,6 +39,15 @@ WHERE continent is not Null
 GROUP BY location
 ORDER BY highest_death_count desc
 
+-- Total Death Count by Continents
+
+SELECT location, SUM(CAST(new_deaths as int)) as total_death_count
+FROM PortfolioProject..CovidDeaths
+WHERE continent is Null
+and location not in ('World', 'European Union', 'International', 'Upper middle income', 'Lower middle income', 'High income', 'Low income')
+GROUP BY location
+ORDER BY total_death_count desc
+
 -- Continent with the Highest Death Count
 
 SELECT continent, MAX(CAST(total_deaths as int)) as highest_death_count
