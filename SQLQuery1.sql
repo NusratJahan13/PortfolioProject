@@ -26,9 +26,9 @@ ORDER BY 1,2
 
 -- Countries with Highest Infection Rate compared to Population
 
-SELECT location, population, MAX(total_cases) as highest_infection_count, MAX((total_cases/population))*100 as percent_population_infected
+SELECT Location, Population,date, MAX(total_cases) as highest_infection_count,  MAX((total_cases/population))*100 as percent_population_infected
 FROM PortfolioProject..CovidDeaths
-GROUP BY location, population
+GROUP BY Location, Population, date
 ORDER BY percent_population_infected desc
 
 -- Countries with Highest Death Count compared to Population
