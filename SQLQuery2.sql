@@ -160,3 +160,4 @@ FROM PortfolioProject..NashvilleHousing
 
 ALTER TABLE PortfolioProject..NashvilleHousing
 DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress, SaleDate
+
